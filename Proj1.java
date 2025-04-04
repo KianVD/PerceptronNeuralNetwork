@@ -46,8 +46,6 @@ public class Proj1 {
     public static int outputDimension;
     public static int numberOfLetters;
 
-    public static int initWeightsBool;
-
     public static void main(String[] args) {
         System.out.println("Welcome to our first neural network - A Perceptron Net!");
         System.out.println("1) Enter 1 to train the net on a data file");
@@ -123,7 +121,7 @@ public class Proj1 {
 
             Random random = new Random();
             //Initialize weights according to user input
-            if (initWeightsBool == 1){
+            if (training.initWeightsBool == 1){
                 for(int row = 0; row < colDimension; row++){
                     for(int col = 0; col < (colDimension*rowDimension); col++){
                         weights_j_i[row][col] = -0.5 + (random.nextDouble() * (0.5 - (-0.5)));
